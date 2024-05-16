@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>𝐌𝐀𝐑𝐕𝐄𝐋</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/prueba1.css">
+    <link rel="icon" href="css/marvel.ico" type="image/x-icon">
+    <script src="loadSidebar.js"></script>
+    <style>
+        /* Estilos para el encabezado */
+        .header {
+            height: 180px; /* Ajusta la altura del encabezado según sea necesario */
+            position: relative;
+            z-index: 20; /* Asegura que la imagen esté por encima de cualquier otro contenido */
+        }
+
+        .topnav {
+            position: relative;
+            z-index: 20; /* Asegura que la imagen esté por encima de cualquier otro contenido */
+        }
+
+        /* Estilos para la imagen que aparecerá arriba de todo */
+        .fixed-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+        }
+
+     /* Estilos del tooltip */
+     .sidebar-link {
+        position: relative; /* Asegura que el tooltip sea relativo a este enlace */
+        display: inline-block; /* Permite que el tooltip se muestre al lado del icono */
+    }
+
+    .sidebar-link:hover::after {
+        content: attr(data-title); /* Muestra el texto del atributo title */
+        position: absolute;
+        background-color: black;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 12px;
+        top: 50%; /* Centrado verticalmente */
+        left: 100%; /* Posición a la derecha del enlace */
+        transform: translateY(-50%); /* Centrado vertical */
+        white-space: nowrap; /* Evita que el texto se rompa */
+        z-index: 999; /* Asegura que esté por encima de otros elementos */
+        transition: visibility 0s, opacity 0.5s; /* Agrega una transición suave */
+    }
+    </style>
+</head>
+
+
+<body>
+    <div id="encabezado" class="header">
+        <a href="Marvel Comics web.html" class="no-underline">
+            <h1>Marvel Comics Web</h1>
+            <h2>Emanuel</h2>
+        </a>
+    </div>
+    <!-- Barra de navegación -->
+    <div class="topnav" id="myTopnav">
+        <!-- Botón de la imagen que solo se muestra en modo sticky -->
+        <img src="Images/MARVEL Minimalista button.png" alt="Marvel Web" class="sticky-button">
+        <!-- Resto de tus enlaces de navegación -->
+        <a href="https://www.marvel.com/unlimited?cid=dcom_promomodule_20210622_unlimited_comics-page" target="_blank" rel="noopener noreferrer">Marvel Unilimited</a>
+        <a href="https://www.marvel.com/culture-lifestyle/books" target="_blank" rel="noopener noreferrer">Acheter des livres</a>
+        <a href="https://www.marvel.com/comics" style="float:right" target="_blank" rel="noopener noreferrer">Site officiel de Marvel des Comics</a>
+    </div>
+    <div class="sidebar">
+        <a href="Marvel web.html" class="sidebar-link" data-title="Accueil">
+            <img src="Icons/icons8-home-page.svg" alt="Icon 1" class="sidebar-icon">
+        </a>
+        <a href="Marvel Comics web.html" class="sidebar-link" data-title="Comics">
+            <img src="Icons/icons8-comic-30.png" alt="Icon 2" class="sidebar-icon">
+        </a>
+        <a href="Marvel Games web.html" class="sidebar-link" data-title="Jeuxvidéos">
+            <img src="Icons/icons8-games-64.png" alt="Icon 3" class="sidebar-icon">
+        </a>
+        <a class="sidebar-link" data-title="Le Gant de l'Infini" style="display: none;" id="gauntletButton">
+            <img src="css/Infinity/icons8-infinity-gauntlet.png" alt="Infinity Gauntlet" class="sidebar-icon">
+        </a>
+        <div class="gem" id="gem1"></div>
+        <!-- Add more links as needed -->
+    </div>
+    
+    <!-- Imagen que aparecerá arriba de todo -->
+    <img src="css/fondotop.png" alt="." class="fixed-image">
+
+    <div class="main-content">
+        <div class="row">
+            <div class="leftcolumn" id="leftcolumn">
+                <div class="card">
+                    <h1>Marvel Unlimited :</h1>
+                    <p>Marvel Unlimited est un service d'abonnement numérique qui donne accès à des milliers de bandes dessinées Marvel. Que vous soyez un fan de longue date ou que vous découvriez tout juste l'univers Marvel, Marvel Unlimited offre une expérience inégalée pour plonger dans les aventures de vos super-héros préférés.</p>
+                    <div class="image">
+                    <img src="https://i.annihil.us/u/prod/marvel/images/mu/web/2021/musellpage-og-image.jpg" alt="Marvel Unlimited" width="100%" class="rounded-img">
+                    </div>
+                    <p>Grâce à Marvel Unlimited, vous pouvez lire des classiques intemporels, des histoires récentes et des séries limitées exclusives. Que vous préfériez les Avengers, Spider-Man, les X-Men ou tout autre super-héros Marvel, vous trouverez une abondance de contenu à explorer.</p>
+                    <p>De plus, Marvel Unlimited propose des fonctionnalités conviviales telles que la création de listes de lecture personnalisées, des recommandations basées sur vos lectures précédentes et des modes de lecture hors ligne pour profiter de vos bandes dessinées préférées où que vous soyez.</p>
+                    <p>Rejoignez des millions de fans à travers le monde qui ont choisi Marvel Unlimited comme leur destination numéro un pour l'univers Marvel. Abonnez-vous dès aujourd'hui et plongez dans un monde de super-héros, de vilains et d'aventures épiques.</p>
+                </div>
+                <div class="card">
+                    <h1>Les comics les plus populaires de Marvel</h1>
+                    <p>Marvel Comics est connu pour ses super-héros emblématiques, et parmi eux, trois équipes ou personnages se démarquent : les X-Men, Spider-Man et les Vengeurs. Voici un aperçu de ces séries qui captivent l'imagination des fans du monde entier :</p>
+                    
+                    <h2>Les X-Men :</h2>
+                    <div class="image">
+                    <img src="https://cdn.hobbyconsolas.com/sites/navi.axelspringer.es/public/media/image/2019/06/mejores-comics-x-men.jpg?tf=3840x" alt="X-Men" width="100%" class="rounded-img">
+                    </div>
+                    <p>Les X-Men sont une équipe de mutants dotés de pouvoirs extraordinaires qui luttent pour la coexistence pacifique entre les mutants et les humains. Créés par Stan Lee et Jack Kirby, les X-Men ont captivé les lecteurs avec leurs histoires de courage, de discrimination et de sacrifice depuis leur première apparition en 1963.</p>
+            
+                    <h2>Spider-Man :</h2>
+                    <div class="image">
+                    <img src="https://static1.srcdn.com/wordpress/wp-content/uploads/2023/08/spider-man-comic-cover.jpg" alt="Spider-Man" width="100%" class="rounded-img">
+                    </div>
+                    <p>Spider-Man, alias Peter Parker, est l'un des super-héros les plus emblématiques de Marvel. Créé par Stan Lee et Steve Ditko en 1962, Spider-Man est un adolescent ordinaire doté de pouvoirs arachnéens qui lutte contre le crime tout en jonglant avec les défis de la vie quotidienne. Ses aventures pleines d'action et de drame ont captivé des générations de fans.</p>
+            
+                    <h2>Les Vengeurs :</h2>
+                    <div class="gem" id="gem5"></div>
+                    <div class="image">
+                    <img src="https://images.comicbooktreasury.com/wp-content/uploads/2022/05/Avengers-Reading-Order.jpg" alt="Les Vengeurs" width="100%" class="rounded-img">
+                    </div>
+                    <p>Les Vengeurs sont une équipe de super-héros rassemblés pour défendre le monde contre les menaces les plus dangereuses. Fondée en 1963 par Stan Lee et Jack Kirby, l'équipe originale comprenait des héros tels que Iron Man, Thor, Hulk, Ant-Man et la Guêpe. Les Vengeurs ont inspiré de nombreux comics, films et séries télévisées et restent l'une des équipes les plus populaires de l'univers Marvel.</p>
+                </div>
+        </div>
+    <div id="right-column-container"></div>
+</div>
+<button id="resetButton">Reset</button>
+<div class="footer">
+    <h2>©2024 MARVEL</h2><div class="gem" id="gem3"></div>
+</div>
+
+    <!-- JavaScript para hacer la barra de navegación fija -->
+    <script>
+        window.onscroll = function () { stickyFunction() };
+
+        var navbar = document.getElementById("myTopnav");
+        var sticky = navbar.offsetTop;
+
+        function stickyFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,455 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>𝐌𝐀𝐑𝐕𝐄𝐋</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/prueba1.css">
+    <link rel="icon" href="css/marvel.ico" type="image/x-icon">
+    <script src="loadSidebar.js"></script>
+    <style>
+    /* Estilos para el encabezado */
+    .header {
+        height: 180px; /* Ajusta la altura del encabezado según sea necesario */
+        position: relative;
+        z-index: 20; /* Asegura que la imagen esté por encima de cualquier otro contenido */
+    }
+
+    .topnav {
+        position: relative;
+        z-index: 20; /* Asegura que la imagen esté por encima de cualquier otro contenido */
+    }
+
+    /* Estilos para la imagen que aparecerá arriba de todo */
+    .fixed-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+     /* Estilos del tooltip */
+     .sidebar-link {
+        position: relative; /* Asegura que el tooltip sea relativo a este enlace */
+        display: inline-block; /* Permite que el tooltip se muestre al lado del icono */
+    }
+
+    .sidebar-link:hover::after {
+        content: attr(data-title); /* Muestra el texto del atributo title */
+        position: absolute;
+        background-color: black;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 12px;
+        top: 50%; /* Centrado verticalmente */
+        left: 100%; /* Posición a la derecha del enlace */
+        transform: translateY(-50%); /* Centrado vertical */
+        white-space: nowrap; /* Evita que el texto se rompa */
+        z-index: 999; /* Asegura que esté por encima de otros elementos */
+        transition: visibility 0s, opacity 0.5s; /* Agrega una transición suave */
+    }
+    </style>
+</head>
+
+
+<body>
+    <div id="encabezado" class="header">
+        <a href="Marvel web.html" class="no-underline">
+            <h1>Marvel Web</h1>
+            <h2>Emanuel</h2>
+        </a>
+    </div>
+    <!-- Barra de navegación -->
+    <div class="topnav" id="myTopnav">
+        <!-- Botón de la imagen que solo se muestra en modo sticky -->
+        <img src="Images/MARVEL Minimalista button.png" alt="Marvel Web" class="sticky-button">
+        <!-- Resto de tus enlaces de navegación -->
+        <a href="personajes.html">Personnages</a>
+        <a href="peliculas.html">Series et films</a>
+        <a href="https://www.marvel.com/" style="float:right" target="_blank" rel="noopener noreferrer">Site officiel de Marvel</a>
+    </div>
+    <div class="sidebar">
+        <a href="Marvel web.html" class="sidebar-link" data-title="Accueil">
+            <img src="Icons/icons8-home-page.svg" alt="Icon 1" class="sidebar-icon">
+        </a>
+        <a href="Marvel Comics web.html" class="sidebar-link" data-title="Comics">
+            <img src="Icons/icons8-comic-30.png" alt="Icon 2" class="sidebar-icon">
+        </a>
+        <a href="Marvel Games web.html" class="sidebar-link" data-title="Jeuxvidéos">
+            <img src="Icons/icons8-games-64.png" alt="Icon 3" class="sidebar-icon">
+        </a>
+        <a class="sidebar-link" data-title="Le Gant de l'Infini" style="display: none;" id="gauntletButton">
+            <img src="css/Infinity/icons8-infinity-gauntlet.png" alt="Infinity Gauntlet" class="sidebar-icon">
+        </a>
+        <div class="gem" id="gem1"></div>
+        <!-- Add more links as needed -->
+    </div>
+    
+    <!-- Imagen que aparecerá arriba de todo -->
+    <img src="css/fondotop.png" alt="." class="fixed-image">
+
+<div class="main-content">
+<div class="row">
+    <div class="leftcolumn">
+
+        <!-- Iron Man (2008) -->
+        <div class="card">
+            <h2>Iron Man :</h2>
+            <div class="image">
+                <img src="https://assets.adnradio.cl/2022/12/Iron-Man-pel%C3%ADcula-Marvel.jpeg" alt="Iron Man" width="100%" class="rounded-img">
+            </div>
+            <p>Iron Man, également connu sous le nom de Tony Stark, est un génie milliardaire et inventeur qui devient super-héros grâce à son armure de haute technologie.</p>
+        </div>
+
+        <!-- The Incredible Hulk (2008) -->
+        <div class="card">
+            <h2>The Incredible Hulk :</h2>
+            <div class="image">
+                <img src="https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEjFF0kLoRtEH-7uIE7zAIUtLLisMqXpcu3bSBzN8Sk-_nZD3K5djD4aMxDYz6bhvUu84AU05RfX6_Cf-X7vTJ3Mu4Advd_khOcl0HorcEP4c1Mpm-BTylF_JDZzNmCRoU018egb24jzuhO5/s1600/craig-armstrong-the-incredible-hulk-cover.jpg" alt="Hulk" width="100%" class="rounded-img">
+            </div>
+            <p>Hulk, également connu sous le nom de Bruce Banner, est un scientifique qui se transforme en une bête verte à la force colossale lorsqu'il se met en colère.</p>
+        </div>
+
+        <!-- Iron Man 2 (2010) -->
+        <div class="card">
+            <h2>Iron Man 2 :</h2>
+            <div class="image">
+                <img src="https://fr.web.img2.acsta.net/medias/nmedia/18/70/45/28/19408942.jpg" alt="Iron Man 2" width="100%" class="rounded-img">
+            </div>
+            <p>La suite d'Iron Man raconte l'histoire de Tony Stark faisant face à de nouveaux ennemis, dont un qui a un lien avec le passé de sa famille.</p>
+        </div>
+
+        <!-- Thor (2011) -->
+        <div class="card">
+            <h2>Thor :</h2>
+            <div class="image">
+                <img src="https://hackernoon.imgix.net/images/eQHzh6rz7ETBHLjs0KzCl1Dooqp2-xj93oy3.jpeg" alt="Thor" width="100%" class="rounded-img">
+            </div>
+            <p>Thor, le dieu du tonnerre, est un puissant guerrier asgardien qui manie un marteau magique appelé Mjolnir.</p>
+        </div>
+
+        <!-- Captain America: The First Avenger (2011) -->
+        <div class="card">
+            <h2>Captain America :The First Avenger :</h2>
+            <div class="image">
+                <img src="https://m.media-amazon.com/images/I/71xludGUQ-L._AC_UF1000,1000_QL80_.jpg" alt="Capitán América" width="100%" class="rounded-img">
+            </div>
+            <p>Captain America, également connu sous le nom de Steve Rogers, est un super-héros doté d'une force surhumaine qui lutte inlassablement pour la justice.</p>
+        </div>
+
+        <!-- The Avengers (2012) -->
+        <div class="card">
+            <h2>The Avengers :</h2>
+            <div class="image">
+                <img src="https://cdn.marvel.com/content/1x/theavengers_lob_mas_dsk_03_1.jpg" alt="The Avengers" width="100%" class="rounded-img">
+            </div>
+            <p>The Avengers réunit plusieurs super-héros comme Iron Man, Thor, Captain America, Black Widow, Hawkeye et Hulk pour affronter Loki et son armée.</p>
+        </div>
+
+        <!-- Iron Man 3 (2013) -->
+        <div class="card">
+            <h2>Iron Man 3 :</h2>
+            <div class="image">
+                <img src="https://legacymovieposters.com/cdn/shop/products/IronMan3_teaser.jpg?v=1668071052" alt="Iron Man 3" width="100%" class="rounded-img">
+            </div>
+            <p>Iron Man 3 met en vedette Tony Stark qui doit faire face à un ennemi puissant et explorer ses propres démons intérieurs.</p>
+        </div>
+
+        <!-- Thor: The Dark World (2013) -->
+        <div class="card">
+            <h2>Thor : The Dark World :</h2>
+            <div class="image">
+                <img src="https://im.ziffdavisinternational.com/ign_es/screenshot/t/thor-el-mundo-oscuro-lanza-un-nuevo-poster/thor-el-mundo-oscuro-lanza-un-nuevo-poster_k6bq.jpg" alt="Thor: The Dark World" width="100%" class="rounded-img">
+            </div>
+            <p>Thor lutte contre un ancien ennemi qui menace de plonger l'univers entier dans les ténèbres.</p>
+        </div>
+
+        <!-- Captain America: The Winter Soldier (2014) -->
+        <div class="card">
+            <h2>Captain America : The Winter Soldier :</h2>
+            <div class="image">
+                <img src="https://i.pinimg.com/736x/b8/b9/25/b8b925f6b4979c1d3df7184acdfc4d66.jpg" alt="Captain America: The Winter Soldier" width="100%" class="rounded-img">
+            </div>
+            <p>Captain America, avec l'aide de Black Widow et du Falcon, combat une nouvelle menace appelée le Winter Soldier.</p>
+        </div>
+
+        <!-- Guardians of the Galaxy (2014) -->
+        <div class="card">
+            <h2>Guardians of the Galaxy :</h2>
+            <div class="image">
+                <img src="https://i.ebayimg.com/images/g/S-AAAOSwDwdkXUPx/s-l1200.webp" alt="Guardians of the Galaxy" width="100%" class="rounded-img">
+            </div>
+            <p>Guardians of the Galaxy raconte les aventures de Star-Lord et de sa bande de gardiens excentriques qui protègent l'univers contre diverses menaces.</p>
+        </div>
+
+        <!-- Avengers: Age of Ultron (2015) -->
+        <div class="card">
+            <h2>Avengers: Age of Ultron :</h2>
+            <div class="image">
+                <img src="https://static.bookscovers.es/imagenes/9788413/978841334096.JPG" alt="Avengers: Age of Ultron" width="100%" class="rounded-img">
+            </div>
+            <p>Avengers: Age of Ultron présente les Avengers luttant contre un nouvel ennemi, Ultron, une intelligence artificielle qui cherche à détruire l'humanité.</p>
+        </div>
+
+        <!-- Ant-Man (2015) -->
+        <div class="card">
+            <h2>Ant-Man :</h2>
+            <div class="image">
+                <img src="https://m.media-amazon.com/images/I/71rFsDKLSML._AC_UF1000,1000_QL80_.jpg" alt="Ant-Man" width="100%" class="rounded-img">
+            </div>
+            <p>Ant-Man, également connu sous le nom de Scott Lang, est un voleur repenti qui acquiert la capacité de réduire sa taille tout en augmentant sa force grâce à un costume spécial.</p>
+        </div>
+
+        <!-- Captain America: Civil War (2016) -->
+        <div class="card">
+            <h2>Captain America: Civil War :</h2>
+            <div class="image">
+                <img src="https://m.media-amazon.com/images/I/71wOol9HilL._AC_UF1000,1000_QL80_.jpg" alt="Captain America: Civil War" width="100%" class="rounded-img">
+            </div>
+            <p>Captain America et Iron Man sont en désaccord sur la réglementation des super-héros, ce qui entraîne une guerre civile entre les Avengers.</p>
+        </div>
+
+        <!-- Doctor Strange (2016) -->
+        <div class="card">
+            <h2>Doctor Strange :</h2>
+            <div class="image">
+                <img src="https://www.comicsblog.fr//images/galerie/bigimage/dycstreugipystir.jpg" alt="Doctor Strange" width="100%" class="rounded-img">
+            </div>
+            <p>Doctor Strange, également connu sous le nom de Stephen Strange, est un ancien chirurgien devenu le Sorcier Suprême, maître des arts mystiques.</p>
+        </div>
+
+        <!-- Guardians of the Galaxy Vol. 2 (2017) -->
+        <div class="card">
+            <h2>Guardians of the Galaxy Vol. 2 :</h2>
+            <div class="image">
+                <img src="https://m.media-amazon.com/images/I/71K+P8n6sGL._AC_UF894,1000_QL80_.jpg" alt="Guardians of the Galaxy Vol. 2" width="100%" class="rounded-img">
+            </div>
+            <p>Guardians of the Galaxy Vol. 2 poursuit les aventures de l'équipe alors qu'ils découvrent des secrets sur le passé de Star-Lord et affrontent de nouveaux défis.</p>
+        </div>
+
+        <!-- Spider-Man: Homecoming (2017) -->
+        <div class="card">
+            <h2>Spider-Man: Homecoming :</h2>
+            <div class="image">
+                <img src="https://m.media-amazon.com/images/M/MV5BOGQ5YTM3YzctOTVmMC00OGIyLWFkZTYtMWYwOWZhMjA2MWMwXkEyXkFqcGdeQXVyMjUyMTE5MA@@._V1_.jpg" alt="Spider-Man: Homecoming" width="100%" class="rounded-img">
+            </div>
+            <p>Spider-Man: Homecoming suit Peter Parker alors qu'il jongle entre sa vie de lycéen et ses responsabilités en tant que super-héros.</p>
+        </div>
+
+        <!-- Thor: Ragnarok (2017) -->
+        <div class="card">
+            <h2>Thor: Ragnarok :</h2>
+            <div class="image">
+                <img src="https://i.ebayimg.com/images/g/7VsAAOSwH35Zn5-g/s-l1600.jpg" alt="Thor: Ragnarok" width="100%" class="rounded-img">
+            </div>
+            <p>Thor: Ragnarok raconte l'histoire de Thor combattant Hela, la déesse de la mort, pour sauver Asgard de la destruction.</p>
+        </div>
+
+        <!-- Black Panther (2018) -->
+        <div class="card">
+            <h2>Black Panther :</h2>
+            <div class="image">
+                <img src="https://i0.wp.com/ofafricamag.com/wp-content/uploads/2018/03/black-panther-movie-poster.jpeg?resize=1440%2C640&ssl=1" alt="Black Panther" width="100%" class="rounded-img">
+            </div>
+            <p>Black Panther, également connu sous le nom de T'Challa, est le roi de Wakanda et un guerrier exceptionnellement compétent.</p>
+        </div>
+
+        <!-- Avengers: Infinity War (2018) -->
+        <div class="card">
+            <div class="gem" id="gem2"></div>
+            <h2>Avengers : Infinity War :</h2>
+            <div class="image">
+                <img src="https://m.media-amazon.com/images/I/811xdZfsUqL._AC_UF1000,1000_QL80_.jpg" alt="Avengers: Infinity War" width="100%" class="rounded-img">
+            </div>
+            <p>Avengers : Infinity War met en vedette les Avengers unissant leurs forces avec les Guardians of the Galaxy pour combattre Thanos dans sa quête des Pierres de l'Infini.</p>
+        </div>
+
+        <!-- Ant-Man and the Wasp (2018) -->
+        <div class="card">
+            <h2>Ant-Man and the Wasp :</h2>
+            <div class="image">
+                <img src="https://static.posters.cz/image/750/affiches-et-posters/ant-man-and-the-wasp-dynamic-i61120.jpg" alt="Ant-Man and the Wasp" width="100%" class="rounded-img">
+            </div>
+            <p>Ant-Man et la Guêpe doivent affronter de nouveaux ennemis tout en explorant les secrets du Royaume Quantique.</p>
+        </div>
+
+        <!-- Captain Marvel (2019) -->
+        <div class="card">
+            <h2>Captain Marvel :</h2>
+            <div class="image">
+                <img src="https://i.ebayimg.com/images/g/JZkAAOSwXL1cYzOt/s-l1200.webp" alt="Captain Marvel" width="100%" class="rounded-img">
+            </div>
+            <p>Captain Marvel, également connue sous le nom de Carol Danvers, est une pilote de l'US Air Force qui découvre ses origines extraterrestres et ses pouvoirs surhumains.</p>
+        </div>
+
+        <!-- Avengers: Endgame (2019) -->
+        <div class="card">
+            <h2>Avengers : Endgame :</h2>
+            <div class="image">
+                <img src="https://lumiere-a.akamaihd.net/v1/images/p_avengersendgame_19751_e14a0104.jpeg?region=0,0,540,810" alt="Avengers: Endgame" width="100%" class="rounded-img">
+            </div>
+            <p>Avengers : Endgame est la conclusion épique de la saga Infinity où les Avengers affrontent Thanos pour inverser les dégâts causés par son claquement de doigts.</p>
+        </div>
+
+        <!-- Spider-Man: Far From Home (2019) -->
+        <div class="card">
+            <h2>Spider-Man : Far From Home :</h2>
+            <div class="image">
+                <img src="https://i.ebayimg.com/images/g/Pc8AAOSwWBth9cf2/s-l1600.jpg" alt="Spider-Man: Far From Home" width="100%" class="rounded-img">
+            </div>
+            <p>Spider-Man : Far From Home suit Peter Parker dans un voyage scolaire en Europe, où il doit faire face à de nouvelles menaces.</p>
+        </div>
+
+        <!-- Black Widow (2021) -->
+        <div class="card">
+            <h2>Black Widow :</h2>
+            <div class="image">
+                <img src="https://m.media-amazon.com/images/I/71eqa1EAKCL.jpg" alt="Black Widow" width="100%" class="rounded-img">
+            </div>
+            <p>Black Widow, également connue sous le nom de Natasha Romanoff, est une espionne et combattante experte qui doit affronter des ennemis de son passé.</p>
+        </div>
+
+        <!-- Eternals (2021) -->
+        <div class="card">
+            <h2>Eternals :</h2>
+            <div class="image">
+                <img src="https://i.ebayimg.com/images/g/5I0AAOSw0LlhfMST/s-l1600.jpg" alt="Eternals" width="100%" class="rounded-img">
+            </div>
+            <p>Eternals suit un groupe d'êtres immortels qui ont secrètement protégé l'humanité pendant des milliers d'années alors qu'ils affrontent une nouvelle menace appelée les Déviants.</p>
+        </div>
+
+        <!-- Shang-Chi and the Legend of the Ten Rings (2021) -->
+        <div class="card">
+            <h2>Shang-Chi and the Legend of the Ten Rings :</h2>
+            <div class="image">
+                <img src="https://i.ebayimg.com/images/g/ywsAAOSwklVhIHhq/s-l1600.jpg" alt="Shang-Chi and the Legend of the Ten Rings" width="100%" class="rounded-img">
+            </div>
+            <p>Shang-Chi, un maître des arts martiaux, doit affronter les secrets de son passé et la légendaire organisation Ten Rings.</p>
+        </div>
+
+        <!-- Spider-Man: No Way Home (2021) -->
+        <div class="card">
+            <h2>Spider-Man: No Way Home :</h2>
+            <div class="image">
+                <img src="https://m.media-amazon.com/images/I/815zgARVaRL._AC_SL1500_.jpg" alt="Spider-Man: No Way Home" width="100%" class="rounded-img">
+            </div>
+            <p>Spider-Man: No Way Home suit Peter Parker alors qu'il affronte les conséquences de la révélation de son identité secrète et voyage à travers le multivers.</p>
+        </div>
+
+        <!-- Doctor Strange in the Multiverse of Madness (2022) -->
+        <div class="card">
+            <h2>Doctor Strange in the Multiverse of Madness :</h2>
+            <div class="image">
+                <img src="https://images.thedirect.com/media/article_full/doctor-strange-multiverse-of-madness-poster-mcu-marvel-disney.jpg" alt="Doctor Strange in the Multiverse of Madness" width="100%" class="rounded-img">
+            </div>
+            <p>Doctor Strange explore le multivers avec l'aide de nouveaux alliés et anciens ennemis tout en affrontant une nouvelle menace majeure.</p>
+        </div>
+
+        <!-- Thor: Love and Thunder (2022) -->
+        <div class="card">
+            <h2>Thor: Love and Thunder :</h2>
+            <div class="image">
+                <img src="https://m.media-amazon.com/images/I/71Qbo0tyNBL._AC_UF1000,1000_QL80_DpWeblab_.jpg" alt="Thor: Love and Thunder" width="100%" class="rounded-img">
+            </div>
+            <p>Thor: Love and Thunder suit Thor alors qu'il affronte Gorr, le Boucher des dieux, et retrouve son ancien amour, Jane Foster, qui est désormais la Puissance de Thor.</p>
+        </div>
+
+        <!-- Black Panther: Wakanda Forever (2022) -->
+        <div class="card">
+            <h2>Black Panther: Wakanda Forever :</h2>
+            <div class="image">
+                <img src="https://m.media-amazon.com/images/I/91MQccsXj9L.jpg" alt="Black Panther: Wakanda Forever" width="100%" class="rounded-img">
+            </div>
+            <p>Black Panther: Wakanda Forever explore les conséquences de la disparition de T'Challa et les efforts pour protéger Wakanda face à de nouvelles menaces.</p>
+        </div>
+        <!-- Série sur Disney+ : Moi, Groot* -->
+        <div class="card">
+            <h2>Série sur Disney+ : Moi, Groot :</h2>
+            <div class="image">
+                <img src="https://global-img.gamergen.com/i-am-groot-05-06-2022_0901002970.jpg" alt="Série sur Disney+ : Moi, Groot" width="100%" class="rounded-img">
+            </div>
+            <p>Moi, Groot est une série de courts-métrages animés mettant en vedette Baby Groot dans diverses aventures amusantes et charmantes à travers l'univers.</p>
+        </div>
+        
+        <!-- Ant-Man et la Guêpe : Quantumania (2023) -->
+        <div class="card">
+            <h2>Ant-Man et la Guêpe : Quantumania :</h2>
+            <div class="image">
+                <img src="https://fr.web.img3.acsta.net/pictures/23/01/18/09/30/1638482.jpg" alt="Ant-Man et la Guêpe : Quantumania" width="100%" class="rounded-img">
+            </div>
+            <p>Ant-Man et la Guêpe se retrouvent impliqués dans une aventure dans le royaume quantique, où ils rencontrent de nouvelles créatures et ennemis.</p>
+        </div>
+        
+        <!-- Les Gardiens de la Galaxie Vol. 3 (2023) -->
+        <div class="card">
+            <h2>Les Gardiens de la Galaxie Vol. 3 :</h2>
+            <div class="image">
+                <img src="https://static.posters.cz/image/1300/affiches-et-posters/marvel-guardians-of-the-galaxy-3-one-more-with-feeling-i173488.jpg" alt="Les Gardiens de la Galaxie Vol. 3" width="100%" class="rounded-img">
+            </div>
+            <p>Les Gardiens de la Galaxie Vol. 3 poursuit les aventures de Star-Lord et de son équipe alors qu'ils font face à de nouveaux défis et ennemis.</p>
+        </div>
+        
+        <!-- Série sur Disney+ : Invasion secrète (2023) -->
+        <div class="card">
+            <h2>Série sur Disney+ : Invasion secrète :</h2>
+            <div class="image">
+                <img src="https://i.ebayimg.com/images/g/yDkAAOSw9BNkhAf0/s-l1200.webp" alt="Invasion secrète" width="100%" class="rounded-img">
+            </div>
+            <p>Invasion secrète suit Nick Fury et Talos qui découvrent une invasion secrète des Skrulls, des extraterrestres métamorphes qui se cachent parmi les humains.</p>
+        </div>
+        
+        <!-- Série sur Disney+ : Loki Saison  (2023) -->
+        <div class="card">
+            <h2>Série sur Disney+ : Loki :</h2>
+            <div class="image">
+                <img src="https://cdn11.bigcommerce.com/s-ydriczk/images/stencil/1500x1500/products/90302/98771/Loki-season-2-original-tv-one-sheet-poster-buy-now-at-starstills__88779.1698076395.jpg?c=2" alt="Loki Saison 2" width="100%" class="rounded-img">
+            </div>
+            <p>La saison 2 de Loki continue à explorer les aventures de Loki à travers le temps et l'espace, alors qu'il fait face à de nouvelles menaces et énigmes temporelles.</p>
+        </div>
+        
+        <!-- The Marvels (2023) -->
+        <div class="card">
+            <h2>The Marvels :</h2>
+            <div class="image">
+                <img src="https://i.ebayimg.com/images/g/kW4AAOSwPLJj8ulu/s-l1600.jpg" alt="The Marvels" width="100%" class="rounded-img">
+            </div>
+            <p>The Marvels réunit Captain Marvel, Monica Rambeau et Kamala Khan (Ms. Marvel) dans une aventure intergalactique pour sauver l'univers.</p>
+        </div>
+        
+        <!-- Série sur Disney+ : ECHO (2024) -->
+        <div class="card">
+            <h2>Série sur Disney+ : ECHO :</h2>
+            <div class="image">
+                <img src="https://prod-ripcut-delivery.disney-plus.net/v1/variant/disney/95E4A6493833AC585EB7861A7C254002A9CCD38B6847EC7349B4AEFDCDE15AA8/scale?width=1200&aspectRatio=1.78&format=webp" alt="Série sur Disney+ : ECHO" width="100%" class="rounded-img">
+            </div>
+            <p>Echo, également connue sous le nom de Maya Lopez, est une super-héroïne sourde et Native American dotée de compétences de combat exceptionnelles et d'une capacité d'imitation incroyable.</p>
+        </div>
+        
+    </div>
+    <div id="right-column-container"></div>
+</div>
+<button id="resetButton">Reset</button>
+<div class="footer">
+    <h2>©2024 MARVEL</h2>
+</div>
+
+    <!-- JavaScript para hacer la barra de navegación fija -->
+    <script>
+        window.onscroll = function () { stickyFunction() };
+
+        var navbar = document.getElementById("myTopnav");
+        var sticky = navbar.offsetTop;
+
+        function stickyFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
