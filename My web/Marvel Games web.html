@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>𝐌𝐀𝐑𝐕𝐄𝐋</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/prueba1.css">
+    <link rel="icon" href="css/marvel.ico" type="image/x-icon">
+    <script src="loadSidebar.js"></script>
+    <style>
+        /* Estilos para el encabezado */
+        .header {
+            height: 180px; /* Ajusta la altura del encabezado según sea necesario */
+            position: relative;
+            z-index: 20; /* Asegura que la imagen esté por encima de cualquier otro contenido */
+        }
+
+        .topnav {
+            position: relative;
+            z-index: 20; /* Asegura que la imagen esté por encima de cualquier otro contenido */
+        }
+
+        /* Estilos para la imagen que aparecerá arriba de todo */
+        .fixed-image {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 10;
+        }
+
+     /* Estilos del tooltip */
+     .sidebar-link {
+        position: relative; /* Asegura que el tooltip sea relativo a este enlace */
+        display: inline-block; /* Permite que el tooltip se muestre al lado del icono */
+    }
+
+    .sidebar-link:hover::after {
+        content: attr(data-title); /* Muestra el texto del atributo title */
+        position: absolute;
+        background-color: black;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 12px;
+        top: 50%; /* Centrado verticalmente */
+        left: 100%; /* Posición a la derecha del enlace */
+        transform: translateY(-50%); /* Centrado vertical */
+        white-space: nowrap; /* Evita que el texto se rompa */
+        z-index: 999; /* Asegura que esté por encima de otros elementos */
+        transition: visibility 0s, opacity 0.5s; /* Agrega una transición suave */
+    }
+    </style>
+</head>
+
+
+<body>
+    <div id="encabezado" class="header">
+        <a href="Marvel Games web.html" class="no-underline">
+            <h1>Marvel Web</h1>
+            <h2>Emanuel</h2>
+        </a>
+    </div>
+    <!-- Barra de navegación -->
+    <div class="topnav" id="myTopnav">
+        <!-- Botón de la imagen que solo se muestra en modo sticky -->
+        <img src="Images/MARVEL Minimalista button.png" alt="Marvel Web" class="sticky-button">
+        <!-- Resto de tus enlaces de navegación -->
+        <a href="https://www.marvel.com/games/fortnite" target="_blank" rel="noopener noreferrer">Marvel Fornite</a>
+        <a href="https://www.marvel.com/games/marvels-spider-man-2" target="_blank" rel="noopener noreferrer">Spider-Man 2</a>
+        <a href="https://www.marvel.com/games" style="float:right" target="_blank" rel="noopener noreferrer">Site officiel des Jeuxvideos de Marvel</a>
+    </div>
+    <div class="sidebar">
+        <a href="Marvel web.html" class="sidebar-link" data-title="Accueil">
+            <img src="Icons/icons8-home-page.svg" alt="Icon 1" class="sidebar-icon">
+        </a>
+        <a href="Marvel Comics web.html" class="sidebar-link" data-title="Comics">
+            <img src="Icons/icons8-comic-30.png" alt="Icon 2" class="sidebar-icon">
+        </a>
+        <a href="Marvel Games web.html" class="sidebar-link" data-title="Jeuxvidéos">
+            <img src="Icons/icons8-games-64.png" alt="Icon 3" class="sidebar-icon">
+        </a>
+        <a class="sidebar-link" data-title="Le Gant de l'Infini" style="display: none;" id="gauntletButton">
+            <img src="css/Infinity/icons8-infinity-gauntlet.png" alt="Infinity Gauntlet" class="sidebar-icon">
+        </a>
+        <div class="gem" id="gem1"></div>
+        <!-- Add more links as needed -->
+    </div>
+    
+    <!-- Imagen que aparecerá arriba de todo -->
+    <img src="css/fondotop.png" alt="." class="fixed-image">
+
+    <div class="main-content">
+        <div class="row">
+            <div class="leftcolumn" id="leftcolumn">
+                <div class="card">
+                    <h1>Les jeux vidéo Marvel - Explorez l'univers des super-héros en jouant</h1>
+                    <p>Les jeux vidéo Marvel offrent aux fans la possibilité de vivre des aventures épiques en incarnant leurs super-héros préférés. Que vous soyez fan de combats, d'aventures en monde ouvert ou de jeux de rôle, il existe un jeu Marvel pour vous. Explorez l'univers Marvel en jouant à ces titres passionnants :</p>
+                    <div class="image">
+                        <img src="https://fwmedia.fandomwire.com/wp-content/uploads/2024/04/12032917/ps-plus-quietly-announce-marvels-avengers-the-good-one-for-the-service.jpg" alt="Marvel Games" width="100%" class="rounded-img">
+                    </div>
+                    <ul>
+                        <li><strong>Marvel's Spider-Man (2018)</strong> - Incarnez Spider-Man et balayez les rues de New York pour combattre le crime.</li>
+                        <li><strong>Marvel's Avengers (2020)</strong> - Rejoignez une équipe de super-héros, dont Iron Man, Hulk et Black Widow, pour défendre le monde contre les menaces les plus dangereuses.</li>
+                        <li><strong>Marvel's Guardians of the Galaxy (2021)</strong> - Prenez le contrôle de Star-Lord et dirigez les Gardiens de la Galaxie dans une aventure interstellaire pleine d'action et d'humour.</li>
+                        <li><strong>LEGO Marvel Super Heroes (2013)</strong> - Explorez un vaste univers LEGO en incarnant une multitude de super-héros et de super-vilains de l'univers Marvel.</li>
+                        <li><strong>Marvel vs. Capcom: Infinite (2017)</strong> - Affrontez-vous dans ce jeu de combat épique mettant en vedette des personnages de l'univers Marvel et de Capcom.</li>
+                        <li><strong>Marvel's Spider-Man: Miles Morales (2020)</strong> - Suivez les aventures de Miles Morales, le nouveau Spider-Man de New York, dans ce jeu d'action palpitant.</li>
+                        <li><strong>Marvel: Ultimate Alliance (2006)</strong> - Rassemblez une équipe de super-héros et affrontez les forces du mal dans ce jeu de rôle d'action.</li>
+                        <li><strong>Marvel Future Revolution (2021)</strong> - Explorez un monde ouvert multiversel en incarnant vos super-héros préférés dans ce jeu mobile.</li>
+                    </ul>
+            
+                    <p>Cette liste n'est qu'un aperçu des nombreux jeux vidéo passionnants basés sur l'univers Marvel. Que vous soyez un fan de longue date ou un nouveau venu dans le monde des super-héros, il y a un jeu Marvel qui vous permettra de vivre des aventures incroyables.</p>
+                    <div class="gem" id="gem4"></div>
+                </div>
+        </div>
+    <div id="right-column-container"></div>
+</div>
+<button id="resetButton">Reset</button>
+<div class="footer">
+    <h2>©2024 MARVEL</h2>
+</div>
+
+    <!-- JavaScript para hacer la barra de navegación fija -->
+    <script>
+        window.onscroll = function () { stickyFunction() };
+
+        var navbar = document.getElementById("myTopnav");
+        var sticky = navbar.offsetTop;
+
+        function stickyFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

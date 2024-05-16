@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>𝐌𝐀𝐑𝐕𝐄𝐋</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/prueba1 - copia.css">
+    <link rel="icon" href="css/marvel.ico" type="image/x-icon">
+    <script src="loadSidebar.js"></script>
+    <style>
+    /* Estilos para el encabezado */
+    .header {
+        height: 180px; /* Ajusta la altura del encabezado según sea necesario */
+        position: relative;
+        z-index: 20; /* Asegura que la imagen esté por encima de cualquier otro contenido */
+    }
+
+    .topnav {
+        position: relative;
+        z-index: 20; /* Asegura que la imagen esté por encima de cualquier otro contenido */
+    }
+
+    /* Estilos para la imagen que aparecerá arriba de todo */
+    .fixed-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+     /* Estilos del tooltip */
+     .sidebar-link {
+        position: relative; /* Asegura que el tooltip sea relativo a este enlace */
+        display: inline-block; /* Permite que el tooltip se muestre al lado del icono */
+    }
+
+    .sidebar-link:hover::after {
+        content: attr(data-title); /* Muestra el texto del atributo title */
+        position: absolute;
+        background-color: black;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 12px;
+        top: 50%; /* Centrado verticalmente */
+        left: 100%; /* Posición a la derecha del enlace */
+        transform: translateY(-50%); /* Centrado vertical */
+        white-space: nowrap; /* Evita que el texto se rompa */
+        z-index: 999; /* Asegura que esté por encima de otros elementos */
+        transition: visibility 0s, opacity 0.5s; /* Agrega una transición suave */
+    }
+    </style>
+</head>
+
+
+<body>
+    <div id="encabezado" class="header">
+        <a href="Marvel web.html" class="no-underline">
+            <h1>Marvel Web</h1>
+            <h2>Emanuel</h2>
+        </a>
+    </div>
+    <!-- Barra de navegación -->
+    <div class="topnav" id="myTopnav">
+        <!-- Botón de la imagen que solo se muestra en modo sticky -->
+        <img src="Images/MARVEL Minimalista button.png" alt="Marvel Web" class="sticky-button">
+        <!-- Resto de tus enlaces de navegación -->
+        <a href="personajes.html">Personnages</a>
+        <a href="peliculas.html">Series et films</a>
+        <a href="https://www.marvel.com/" style="float:right" target="_blank" rel="noopener noreferrer">Site officiel de Marvel</a>
+    </div>
+    <div class="sidebar">
+        <a href="Marvel web.html" class="sidebar-link" data-title="Accueil">
+            <img src="Icons/icons8-home-page.svg" alt="Icon 1" class="sidebar-icon">
+        </a>
+        <a href="Marvel Comics web.html" class="sidebar-link" data-title="Comics">
+            <img src="Icons/icons8-comic-30.png" alt="Icon 2" class="sidebar-icon">
+        </a>
+        <a href="Marvel Games web.html" class="sidebar-link" data-title="Jeuxvidéos">
+            <img src="Icons/icons8-games-64.png" alt="Icon 3" class="sidebar-icon">
+        </a>
+        <a class="sidebar-link" data-title="Guantelete" style="display: none;" id="gauntletButton">
+            <img src="css/Infinity/icons8-infinity-gauntlet.png" alt="Infinity Gauntlet" class="sidebar-icon">
+        </a>
+        <!-- Add more links as needed -->
+    </div>
+    
+    <!-- Imagen que aparecerá arriba de todo -->
+    <img src="css/fondotop.png" alt="." class="fixed-image">
+
+    <div class="main-content">
+        <div class="row">
+            <div class="leftcolumn" id="leftcolumn">
+                <div class="card">
+                    <div class="gem" id="gem1"></div>
+                    <div class="gem" id="gem2"></div>
+                    <div class="gem" id="gem3"></div>
+                    <div class="gem" id="gem4"></div>
+                    <div class="gem" id="gem5"></div>
+                    <div class="gem" id="gem6"></div>
+                    <h2>Ordre chronologique de l'Univers cinématographique Marvel (MCU) :</h2>
+                    <h5>Pour voirs les films dans le bon ordre</h5>
+                    <div class="image">
+                        <img src="https://media.giphy.com/media/13kajTax0GCg0g/giphy.gif" alt="Serious Avengers" width="100%" class="rounded-img">
+                    </div>
+                    <div>
+                        <p>Voici la chronologie ou l'ordre chronologique dans lequel se déroulent tous les événements des films et des séries Marvel ainsi que leurs scènes post-crédits, afin de connaître l'intrigue de la saga et de comprendre le moment et l'endroit où se déroulent les événements tout au long de son histoire :</p>
+                <ul>
+                    <li>Captain America : First Avenger (2011)</li>
+                    <li>Captain Marvel (2019)</li>
+                        <li>Iron Man (2008)</li>
+                    <li>L'Incroyable Hulk (2008)</li>
+                    <li>Iron Man 2 (2010)</li>
+                    <li>Thor (2011)</li>
+                    <li>Avengers (2012)</li>
+                    <li>Scène post-générique d'Avengers pour faire connaissance avec Thanos (2012)</li>
+                    <li>Iron Man 3 (2013)</li>
+                    <li>Thor : Le Monde des ténèbres (2013)</li>
+                    <li>Captain America : Le Soldat de l'hiver (2014)</li>
+                    <li>Les Gardiens de la Galaxie (2014)</li>
+                    <li>Les Gardiens de la Galaxie Vol. 2 (2017)</li>
+                    <li>Série sur Disney+ : Moi, Groot*</li>
+                    <li>Avengers : L'Ère d'Ultron (2015)</li>
+                    <li>Ant-Man (2015)</li>
+                    <li>Captain America : Civil War (2016)</li>
+                    <li>Black Widow (2021)</li>
+                    <li>Black Panther (2018)</li>
+                    <li>Doctor Strange (2016)</li>
+                    <li>Spider-Man : Homecoming (2017)</li>
+                    <li>Ant-Man et la Guêpe (2018)</li>
+                    <li>Thor : Ragnarok (2017)</li>
+                    <li>Avengers : Infinity War (2018)</li>
+                    <li>Scène post-générique d'Ant-Man et la Guêpe (2018)</li>
+                    <li>Scène post-générique de Captain Marvel (2019)</li>
+                    <li>Avengers : Endgame (2019)</li>
+                    <li>Série sur Disney+ : WandaVision (2021)</li>
+                    <li>Série sur Disney+ : Falcon et le Soldat de l'hiver (2021)</li>
+                    <li>Spider-Man : Far From Home (2019)</li>
+                    <li>Série sur Disney+ : Loki (2021)</li>
+                    <li>Spider-Man : No Way Home (2021)</li>
+                    <li>Les Éternels (2021)</li>
+                    <li>Shang-Chi et la Légende des Dix Anneaux (2021)</li>
+                    <li>Série sur Disney+ : Hawkeye (2021)</li>
+                    <li>Doctor Strange in the Multiverse of Madness (2022)</li>
+                    <li>Série sur Disney+ : Moon Knight (2022)</li>
+                    <li>Série sur Disney+ : Ms. Marvel (2022)</li>
+                    <li>Thor : Love and Thunder (2022)</li>
+                    <li>Série sur Disney+ : She-Hulk (2022)</li>
+                    <li>Spécial sur Disney+ : Werewolf by Night (2022)</li>
+                    <li>Black Panther : Wakanda Forever (2022)</li>
+                    <li>Ant-Man et la Guêpe : Quantumania (2023)</li>
+                    <li>Les Gardiens de la Galaxie Vol. 3 (2023)</li>
+                    <li>Série sur Disney+ : Invasion secrète (2023)</li>
+                    <li>Série sur Disney+ : Loki Saison 2 (2023)</li>
+                    <li>The Marvels (2023)</li>
+                    <li>Série sur Disney+ : ECHO (2024)</li>
+                </ul>
+                <p>*Les producteurs de la série Marvel Studios disent que oui, c'est canon, mais James Gunn diffère.</p>
+                <p>Plus d'information <a href="https://vandal.elespanol.com/reportaje/orden-de-las-peliculas-de-marvel-ucm-cronologia-y-estreno-2020" target="_blank">ici</a>.</p>
+            </div>
+        </div>
+            <div class="card">
+                <h2>Film recommandé :</h2>
+                <h5>Avengers : Endgame</h5>
+                <div class="image">
+                    <img src="Images/endgame.jpg" alt="Avengers: Endgame" width="100%" class="rounded-img">
+                </div>
+                <p>Avengers : Endgame représente la culmination de plus d'une décennie de narration dans l'univers cinématographique Marvel.</p>
+            </div>
+        </div>
+    <div id="right-column-container"></div>
+</div>
+<button id="resetButton">Reset</button>
+<div class="footer">
+    <h2>©2024 MARVEL</h2>
+</div>
+
+    <!-- JavaScript para hacer la barra de navegación fija -->
+    <script>
+        window.onscroll = function () { stickyFunction() };
+
+        var navbar = document.getElementById("myTopnav");
+        var sticky = navbar.offsetTop;
+
+        function stickyFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>

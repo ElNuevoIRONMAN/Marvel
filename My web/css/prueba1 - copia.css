@@ -1,0 +1,323 @@
+/* Establecer el box-sizing y estilo general */
+* {
+  box-sizing: border-box;
+}
+
+@font-face { font-family: Marvel; src: url('AvengeroRegular-zvgl.ttf'); }
+@font-face { font-family: Marvel1; src: url('HoustonComicsPersonalUse-6Yea1.ttf'); }
+@font-face { font-family: Marvel2; src: url('EarthsMightiestItalic-17nv.otf'); }
+
+/* Configuración general del cuerpo */
+body {
+font-family: Marvel1;
+padding: 10px; /* Fondo claro para resaltar los elementos de Marvel */
+background-image: url("fondo2.png");
+background-repeat: no-repeat;
+background-size: cover;
+background-attachment: fixed;
+}
+
+/* Encabezado de la página web */
+.no-underline {
+text-decoration: none;
+}
+
+h1 {
+color: #ffffff00;
+font-size: 50px;
+margin: 0;
+border-radius: 5px;
+position:absolute;
+}
+
+.header h2 {
+color: #ffffff00;
+font-size: 50px;
+margin: 0;
+border-radius: 5px;
+}
+
+/* Barra de navegación */
+.topnav {
+font-family: Marvel;
+font-size: small;
+overflow: hidden;
+border-bottom-left-radius: 5px;
+border-bottom-right-radius: 5px;
+background-color: #FF0000; /* Rojo de Marvel */
+margin-left: 50px;
+}
+
+/* Estilo de los enlaces en la barra de navegación */
+.topnav a {
+float: left;
+display: block;
+color: white;
+text-align: center;
+padding: 14px 16px;
+text-decoration: none;
+border-radius: 5px;
+}
+
+/* Cambiar color al pasar sobre los enlaces */
+.topnav a:hover {
+background-color: #FFCC00; /* Amarillo claro para contraste */
+color: black;
+border-radius: 5px;
+}
+
+/* Estilo para hacer la barra de navegación fija */
+.sticky {
+position: fixed;
+top: 17px;
+z-index: 1000;
+border-top-left-radius: 5px;
+border-top-right-radius: 5px;
+}
+
+/* Estilo para la barra de navegación cuando no está fija */
+#myTopnav {
+position: sticky;
+}
+
+/* Estilo para el botón que se muestra solo en modo sticky */
+.sticky-button {
+display: none; /* Ocultar el botón por defecto */
+margin-right: 20px; /* Ajusta el margen para separar el botón de los otros enlaces */
+float: left; /* Alinea el botón a la izquierda */
+width: 10%; /* Ajusta la anchura de la imagen al 20% del ancho de la barra de navegación */
+height: auto; /* La altura se ajustará automáticamente para mantener la proporción */
+border-bottom-right-radius: 5px;
+border-top-right-radius: 5px;
+}
+
+/* Mostrar el botón solo cuando la barra de navegación está en modo sticky */
+.topnav.sticky .sticky-button {
+display: inline-block; /* Mostrar el botón solo en modo sticky */
+}
+
+/* Columnas */
+.leftcolumn {
+float: left;
+border-radius: 5px;
+width: 70%; /* Ajustar proporción de columnas */
+}
+
+.rightcolumn {
+flex: 1;
+font-family: Marvel2;
+font-size: large;
+float: right;
+width: 30%; /* Ajustar proporción de columnas */
+padding: 20px;
+border-radius: 5px;
+}
+
+/* Estilo de imágenes */
+.image {
+background-color: #D0E0FF; /* Azul claro para mantener la temática Marvel */
+padding: 10px;
+border-radius: 5px;
+}
+
+/* Estilo para imágenes con la clase 'rounded-img' */
+.rounded-img {
+border-radius: 5px;
+}
+
+/* Estilo de tarjetas */
+.card {
+background-color: white;
+padding: 20px;
+margin-top: 20px;
+border-radius: 5px;
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0); /* Sombras sutiles para un efecto de elevación */
+}
+
+/* Limpiar flotados */
+.row:after {
+content: "";
+display: table;
+clear: both;
+border-radius: 5px;
+}
+
+/* Pie de página */
+.footer {
+padding: 20px;
+text-align: center;
+color: white;
+margin-top: 20px;
+border-radius: 5px;
+width: 100%;
+}
+
+/* Estilo para el contenedor del contenido principal */
+.main-content {
+min-height: calc(100% - 40px); /* Calcula la altura total menos la altura del footer */
+margin-bottom: 10px; /* Ajusta según el tamaño de tu footer */
+margin-left: 50px;
+}
+
+/* Diseño adaptable para pantallas más pequeñas */
+@media screen and (max-width: 800px) {
+.leftcolumn, .rightcolumn {
+  width: 100%;
+  padding: 0;
+}
+}
+
+@media screen and (max-width: 400px) {
+.topnav a {
+  float: none;
+  width: 100%;
+}
+}
+
+/* Estilo para el contenedor de íconos de redes sociales */
+.social-icons {
+display: grid; /* Convierte elcontenedor en un contenedor flex */
+grid-template-columns: repeat(3, 1fr); /* Crea una cuadrícula de 3 columnas de ancho igual */
+gap: 10px; /* Espacio entre los elementos de la cuadrícula */
+justify-content: space-between; /* Distribuye los íconos de manera uniforme */
+align-items: center; /* Centra los íconos verticalmente */
+}
+
+/* Estilo para los elementos <a> */
+.social-icons a {
+display: block; /* Asegura que cada <a> ocupe el espacio adecuado */
+}
+
+/* Estilo para las imágenes de redes sociales */
+.social-icons a img {
+width: 32px; /* Puedes ajustar el tamaño de las imágenes según tus necesidades */
+height: 32px;
+}
+
+/* Estilo para los contenedores de íconos y texto */
+.social-icon {
+display: flex; /* Establece flexbox para organizar los elementos dentro del contenedor */
+flex-direction: column; /* Organiza los elementos en columna */
+align-items: center; /* Centra los elementos en el contenedor */
+}
+
+/* Estilo para el texto debajo de los íconos */
+.social-icon p {
+margin-top: 5px; /* Espacio entre el ícono y el texto */
+font-size: 14px; /* Ajusta el tamaño de la fuente */
+}
+
+/* Estilo de la barra lateral */
+.sidebar {
+background-color: #d61111;
+width: 45px; /* Cambia el ancho de la barra lateral a un valor menor para hacerla más fina */
+border-radius: 5px;
+display: flex;
+flex-direction: column;
+align-items: center; /* Centra los elementos horizontalmente */
+justify-content: center; /* Centra los elementos verticalmente */
+padding: 10px;
+position: fixed;
+left: 10px;
+top: 17px;
+bottom: 17px;
+z-index: 20; /* Asegura que la imagen esté por encima de cualquier otro contenido */
+}
+
+.sidebar-link {
+display: flex;
+justify-content: center; /* Centra los iconos horizontalmente */
+align-items: center; /* Centra los iconos verticalmente */
+padding: 10px;
+transition: background-color 0.3s;
+border-radius: 5px;
+margin: 10px 0; /* Añade espacio entre los enlaces */
+}
+
+.sidebar-link:hover {
+background-color: #c80533;
+border-radius: 5px;
+}
+
+.sidebar-icon {
+width: 24px;
+height: 24px;
+margin: 0 auto; /* Centra el icono horizontalmente */
+}
+
+#gauntletButton{
+  width: 24px;
+  height: 24px;
+  background-size: cover;
+  cursor: pointer;
+  display: inline-block;
+}
+
+#gauntletButton:hover::after {
+  content: attr(data-title); /* Muestra el texto del atributo title */
+  position: absolute;
+  background-color: black;
+  color: white;
+  padding: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  top: 50%; /* Centrado verticalmente */
+  left: 110%; /* Posición a la derecha del enlace */
+  transform: translateY(-50%); /* Centrado vertical */
+  white-space: nowrap; /* Evita que el texto se rompa */
+  z-index: 999; /* Asegura que esté por encima de otros elementos */
+  transition: visibility 0s, opacity 0.5s; /* Agrega una transición suave */
+}
+
+#gauntletButton{
+display: flex;
+justify-content: center; /* Centra los iconos horizontalmente */
+align-items: center; /* Centra los iconos verticalmente */
+padding: 10px;
+transition: background-color 0.3s;
+border-radius: 5px;
+margin: 10px 0; /* Añade espacio entre los enlaces */
+}
+
+/*Funcionamiento de las gemas*/ 
+.gem {
+  width: 50px;
+  height: 50px;
+  background-size: cover;
+  cursor: pointer;
+  display: inline-block;
+}
+
+#gem1 { background-image: url('Infinity/icons8-emerald-roja.png'); }
+#gem2 { background-image: url('Infinity/icons8-emerald-naranja.png'); }
+#gem3 { background-image: url('Infinity/icons8-emerald-amarilla.png'); }
+#gem4 { background-image: url('Infinity/icons8-emerald-verde.png'); }
+#gem5 { background-image: url('Infinity/icons8-emerald-azul.png'); }
+#gem6 { background-image: url('Infinity/icons8-emerald-violeta.png'); }
+#gauntletButton { background-image: url('Infinity/icons8-infinity-gauntlet.png'); }
+
+#resetButton {
+  position: fixed;
+  bottom: 10px;
+  right: 10px;
+  padding: 5px 10px;
+  background-color: #ff4d4d; /* Rojo */
+  color: white;
+  font-family: Marvel;
+  border: none;
+  border-radius: 25px; /* Bordes más redondeados */
+  font-size: 10px;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+#resetButton:hover {
+  background-color: #ff1a1a; /* Rojo más intenso al pasar el ratón */
+  transform: translateY(-2px); /* Efecto de elevación al pasar el ratón */
+}
+
+#resetButton:active {
+  background-color: #cc0000; /* Rojo más oscuro al hacer clic */
+  transform: translateY(0); /* Eliminar el efecto de elevación al hacer clic */
+}

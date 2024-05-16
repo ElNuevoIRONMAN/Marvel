@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <link rel="icon" href="css/marvel.ico" type="image/x-icon">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Choisissez votre destination</title>
+    <style>
+        @font-face { font-family: Marvel1; src: url('css/HoustonComicsPersonalUse-6Yea1.ttf'); }
+        body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 80vh;
+            margin: 0;
+            font-family: Marvel1;
+            padding: 10px; 
+            background-image: url("css/fondo2.png");
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .cards {
+            display: flex;
+            gap: 20px;
+            border-radius: 5px;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            background-color: #fff;
+        }
+
+        .card img {
+            width: 150px;
+            height: auto;
+            margin-bottom: 20px;
+            border-radius: 5px;
+        }
+
+        .card button {
+            padding: 10px 20px;
+            background-color: #ff4d4d;
+            color: white;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            cursor: pointer;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            transition: background-color 0.3s ease, transform 0.3s ease;
+            width: 200px; /* Ajusta el ancho según sea necesario */
+            height: 50px;  /* Ajusta la altura según sea necesario */
+        }
+
+        .card button:hover {
+            background-color: #ff1a1a;
+            transform: translateY(-2px);
+        }
+
+        .card button:active {
+            background-color: #cc0000;
+            transform: translateY(0);
+        }
+    </style>
+</head>
+<body>
+    <h1>Choisissez votre destination :</h1>
+    <div class="cards">
+        <div class="card">
+            <img src="Images/chasquido ironman.png" alt="Ironman">
+            <button id="ironmanButton">T'es Ironman</button>
+        </div>
+        <div class="card">
+            <img src="Images/chasquido thanos.png" alt="Inevitable">
+            <button id="inevitableButton">T'es incontournable</button>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("ironmanButton").addEventListener("click", () => {
+            alert("T'as avez sauvé l'univers de la page");
+            window.location.href = "Marvel Web.html"; // Vuelve a la página principal
+        });
+
+        document.getElementById("inevitableButton").addEventListener("click", () => {
+            alert("Destruction imminente...");
+            setTimeout(() => {
+                window.location.href = "error404.html"; // Página personalizada de error 404
+            }, 1000); // 1 segundo
+        });
+    </script>
+</body>
+</html>

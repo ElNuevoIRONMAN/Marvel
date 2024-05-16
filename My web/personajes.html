@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <title>𝐌𝐀𝐑𝐕𝐄𝐋</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/prueba1.css">
+    <link rel="icon" href="css/marvel.ico" type="image/x-icon">
+    <script src="loadSidebar.js"></script>
+    <style>
+    /* Estilos para el encabezado */
+    .header {
+        height: 180px; /* Ajusta la altura del encabezado según sea necesario */
+        position: relative;
+        z-index: 20; /* Asegura que la imagen esté por encima de cualquier otro contenido */
+    }
+
+    .topnav {
+        position: relative;
+        z-index: 20; /* Asegura que la imagen esté por encima de cualquier otro contenido */
+    }
+
+    /* Estilos para la imagen que aparecerá arriba de todo */
+    .fixed-image {
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        z-index: 10;
+    }
+
+     /* Estilos del tooltip */
+     .sidebar-link {
+        position: relative; /* Asegura que el tooltip sea relativo a este enlace */
+        display: inline-block; /* Permite que el tooltip se muestre al lado del icono */
+    }
+
+    .sidebar-link:hover::after {
+        content: attr(data-title); /* Muestra el texto del atributo title */
+        position: absolute;
+        background-color: black;
+        color: white;
+        padding: 5px;
+        border-radius: 5px;
+        font-size: 12px;
+        top: 50%; /* Centrado verticalmente */
+        left: 100%; /* Posición a la derecha del enlace */
+        transform: translateY(-50%); /* Centrado vertical */
+        white-space: nowrap; /* Evita que el texto se rompa */
+        z-index: 999; /* Asegura que esté por encima de otros elementos */
+        transition: visibility 0s, opacity 0.5s; /* Agrega una transición suave */
+    }
+    </style>
+</head>
+
+
+<body>
+    <div id="encabezado" class="header">
+        <a href="Marvel web.html" class="no-underline">
+            <h1>Marvel Web</h1>
+            <h2>Emanuel</h2>
+        </a>
+    </div>
+    <!-- Barra de navegación -->
+    <div class="topnav" id="myTopnav">
+        <!-- Botón de la imagen que solo se muestra en modo sticky -->
+        <img src="Images/MARVEL Minimalista button.png" alt="Marvel Web" class="sticky-button">
+        <!-- Resto de tus enlaces de navegación -->
+        <a href="personajes.html">Personnages</a>
+        <a href="peliculas.html">Series et films</a>
+        <a href="https://www.marvel.com/" style="float:right" target="_blank" rel="noopener noreferrer">Site officiel de Marvel</a>
+    </div>
+    <div class="sidebar">
+        <a href="Marvel web.html" class="sidebar-link" data-title="Accueil">
+            <img src="Icons/icons8-home-page.svg" alt="Icon 1" class="sidebar-icon">
+        </a>
+        <a href="Marvel Comics web.html" class="sidebar-link" data-title="Comics">
+            <img src="Icons/icons8-comic-30.png" alt="Icon 2" class="sidebar-icon">
+        </a>
+        <a href="Marvel Games web.html" class="sidebar-link" data-title="Jeuxvidéos">
+            <img src="Icons/icons8-games-64.png" alt="Icon 3" class="sidebar-icon">
+        </a>
+        <a class="sidebar-link" data-title="Le Gant de l'Infini" style="display: none;" id="gauntletButton">
+            <img src="css/Infinity/icons8-infinity-gauntlet.png" alt="Infinity Gauntlet" class="sidebar-icon">
+        </a>
+        <div class="gem" id="gem1"></div>
+        <!-- Add more links as needed -->
+    </div>
+    
+    <!-- Imagen que aparecerá arriba de todo -->
+    <img src="css/fondotop.png" alt="." class="fixed-image">
+
+<div class="main-content">
+<div class="row">
+    <div class="leftcolumn">
+        <!-- Spider-Man -->
+        <div class="card">
+            <h2>Spider-Man :</h2>
+            <div class="image">
+                <img src="Images/spidey.jpg" alt="Spider-Man" width="100%" class="rounded-img">
+            </div>
+            <p>Spider-Man, également connu sous le nom de Peter Parker, est un jeune héros doté de pouvoirs d'araignée qui protège la ville de New York en combattant le crime.</p>
+        </div>
+        
+        <!-- Iron Man -->
+        <div class="card">
+            <h2>Iron Man :</h2>
+            <div class="image">
+                <img src="https://media.giphy.com/media/MUlmRFnTQxwJ2/giphy.gif" alt="Iron Man" width="100%" class="rounded-img">
+            </div>
+            <p>Iron Man, également connu sous le nom de Tony Stark, est un génie milliardaire et inventeur qui devient super-héros grâce à son armure de haute technologie.</p>
+        </div>
+        
+        <!-- Capitán América -->
+        <div class="card">
+            <h2>Captain America :</h2>
+            <div class="image">
+                <img src="Images/el_cap.jpg" alt="Capitán América" width="100%" class="rounded-img">
+            </div>
+            <p>Captain America, également connu sous le nom de Steve Rogers, est un super-héros doté d'une force surhumaine qui lutte inlassablement pour la justice.</p>
+        </div>
+        
+        <!-- Thor -->
+        <div class="card">
+            <h2>Thor :</h2>
+            <div class="image">
+                <img src="https://giffiles.alphacoders.com/215/215230.gif" alt="Thor" width="100%" class="rounded-img">
+            </div>
+            <p>Thor, le dieu du tonnerre, est un puissant guerrier asgardien qui manie un marteau magique appelé Mjolnir.</p>
+        </div>
+        
+        <!-- Black Widow -->
+        <div class="card">
+            <h2>Black Widow :</h2>
+            <div class="image">
+                <img src="Images/widow.jpg" alt="Black Widow" width="100%" class="rounded-img">
+            </div>
+            <p>Black Widow, également connue sous le nom de Natasha Romanoff, est une espionne et combattante experte.</p>
+        </div>
+        
+        <!-- Hulk -->
+        <div class="card">
+            <h2>Hulk :</h2>
+            <div class="image">
+                <img src="https://media1.tenor.com/m/Ia2WYBbkxXYAAAAC/hulk-smash.gif" alt="Hulk" width="100%" class="rounded-img">
+            </div>
+            <p>Hulk, également connu sous le nom de Bruce Banner, est un scientifique qui se transforme en une bête verte à la force colossale lorsqu'il se met en colère.</p>
+        </div>
+        
+        <!-- Doctor Strange -->
+        <div class="card">
+            <h2>Doctor Strange :</h2>
+            <div class="image">
+                <img src="https://silvertearspeaks.files.wordpress.com/2018/02/ezgif-com-video-to-gif-17.gif?w=600&h=249" alt="Doctor Strange" width="100%" class="rounded-img">
+            </div>
+            <p>Doctor Strange, également connu sous le nom de Stephen Strange, est un ancien chirurgien devenu le Sorcier Suprême, maître des arts mystiques.</p>
+        </div>
+        
+        <!-- Black Panther -->
+        <div class="card">
+            <h2>Black Panther :</h2>
+            <div class="image">
+                <img src="Images/panther.png" alt="Black Panther" width="100%" class="rounded-img">
+            </div>
+            <p>Black Panther, également connu sous le nom de T'Challa, est le roi de Wakanda et un guerrier exceptionnellement compétent.</p>
+        </div>
+        
+        <!-- Villanos -->
+        <!-- Thanos -->
+        <div class="card">  
+        <div class="gem" id="gem6"></div>
+            <h2>Thanos :</h2>
+            <div class="image">
+                <img src="Images/thanos.jpg" alt="Thanos" width="100%" class="rounded-img">
+            </div>
+            <p>Thanos est un titan dément qui cherche à réunir les Pierres de l'Infini pour imposer un nouvel équilibre dans l'univers.</p>
+        </div>
+        
+        <!-- Loki -->
+        <div class="card">
+            <h2>Loki :</h2>
+            <div class="image">
+                <img src="Images/loki.png" alt="Loki" width="100%" class="rounded-img">
+            </div>
+            <p>Loki est le dieu de la ruse et le frère adoptif de Thor, connu pour ses manigances et son ambition de pouvoir.</p>
+        </div>
+
+        <!-- Otros personajes -->
+        <div class="card">
+            <h2>Autres personnages :</h2>
+            <div class="image">
+                <img src="Images/all.jpg" alt="Loki" width="100%" class="rounded-img">
+            </div>
+            <p>L'univers Marvel comprend de nombreux autres personnages tels que Hawkeye, Scarlet Witch, Vision, Ant-Man, Wasp, Falcon, et d'autres.</p>
+        </div>
+    </div>
+    <div id="right-column-container"></div>
+</div>
+<button id="resetButton">Reset</button>
+<div class="footer">
+    <h2>©2024 MARVEL</h2>
+</div>
+
+    <!-- JavaScript para hacer la barra de navegación fija -->
+    <script>
+        window.onscroll = function () { stickyFunction() };
+
+        var navbar = document.getElementById("myTopnav");
+        var sticky = navbar.offsetTop;
+
+        function stickyFunction() {
+            if (window.pageYOffset >= sticky) {
+                navbar.classList.add("sticky")
+            } else {
+                navbar.classList.remove("sticky");
+            }
+        }
+    </script>
+    <script src="script.js"></script>
+</body>
+</html>
